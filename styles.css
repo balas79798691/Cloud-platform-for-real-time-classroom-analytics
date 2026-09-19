@@ -1,0 +1,74 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: #f4f7fb;
+  color: #14213d;
+}
+.app { min-height: 100vh; }
+header {
+  padding: 42px 7%;
+  background: #14213d;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.eyebrow { letter-spacing: 2px; font-size: 12px; opacity: .7; }
+h1 { margin: 6px 0; font-size: 42px; }
+.subtitle { opacity: .75; }
+.status {
+  padding: 10px 15px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.12);
+}
+.live { color: #72efdd; }
+main { width: 86%; max-width: 1200px; margin: 30px auto; }
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 24px;
+}
+.metric, .panel {
+  background: white;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 8px 30px rgba(20,33,61,.07);
+}
+.metric span { color: #6b7280; display: block; }
+.metric strong { display: block; font-size: 32px; margin-top: 10px; }
+.panel { margin-bottom: 24px; }
+.panel-title { display:flex; justify-content:space-between; align-items:center; }
+button {
+  border: 0;
+  padding: 9px 14px;
+  border-radius: 9px;
+  cursor: pointer;
+}
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 15px 8px; text-align: left; border-bottom: 1px solid #edf0f4; }
+.bar-row { display: flex; align-items: center; gap: 10px; }
+.bar { width: 130px; height: 8px; background: #e7ebf1; border-radius: 8px; overflow: hidden; }
+.bar i { display: block; height: 100%; background: #4f46e5; border-radius: 8px; }
+.activity { display: grid; gap: 10px; }
+.activity-item {
+  padding: 14px;
+  background: #f7f8fb;
+  border-radius: 12px;
+  display: grid;
+  gap: 4px;
+}
+.activity-item span { color: #4f46e5; }
+.activity-item small { color: #7b8494; }
+@media (max-width: 800px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+  header { padding: 30px 6%; }
+  main { width: 92%; }
+  .bar { width: 80px; }
+}
+@media (max-width: 520px) {
+  .cards { grid-template-columns: 1fr; }
+  header { display: block; }
+  .status { display: inline-block; margin-top: 15px; }
+}
